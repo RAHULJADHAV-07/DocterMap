@@ -1,6 +1,4 @@
 
-
-````markdown
 # DoctorMap - Setup Guide
 
 DoctorMap is a full-stack web application that helps patients find and connect with doctors in Mumbai.
