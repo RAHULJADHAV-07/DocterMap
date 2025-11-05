@@ -1,8 +1,4 @@
-Got it Rahul 👍
-Let’s make it super simple — here’s a **clean and lightweight README** that only includes the **setup guide** and **project URLs** (no heavy markdown, no emojis, no badges).
-This version will **100% render correctly on GitHub** 👇
 
----
 
 ````markdown
 # DoctorMap - Setup Guide
