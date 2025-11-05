@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1752390776028,
+      "name": "Rahul",
+      "email": "rahuljadhav0417@gmail.com",
+      "password": "Rahul@9175",
+      "phone": "9321756978",
+      "location": "andheri",
+      "role": "patient"
+    },
+    {
+      "id": 1752390868177,
+      "name": "Dr. Rahul",
+      "email": "vu4f2223004@pvppcoe.ac.in",
+      "password": "Rahul@9175",
+      "phone": "9321756970",
+      "location": "andheri",
+      "role": "doctor",
+      "specialization": "Cardiology",
+      "experience": "2",
+      "fee": 9995,
+      "rating": 4.5,
+      "available": true
+    }
+  ]
+}
