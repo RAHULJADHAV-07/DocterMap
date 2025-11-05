@@ -18,7 +18,7 @@ connectDB();
 
 // CORS configuration
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://doctermap.vercel.app', 'https://doctermap.netlify.app'],
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'https://doctermap.vercel.app', 'https://doctermap.netlify.app', 'https://doctormap.netlify.app'],
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
