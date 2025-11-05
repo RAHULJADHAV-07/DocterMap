@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import DoctorCard from '../components/DoctorCard';
 import DoctorMap from '../components/DoctorMap';
+import { CardSkeleton, AppointmentSkeleton, StatsCardSkeleton } from '../components/SkeletonLoader';
 import api from '../api';
 import toast from 'react-hot-toast';
 
@@ -166,7 +167,15 @@ const DashboardPatient = () => {
         </div>
 
        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 animate-fade-in-up animation-delay-200">
+        {/* Stats Cards */}
+        {appointmentsLoading ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 animate-fade-in-up animation-delay-200">
+            <StatsCardSkeleton />
+            <StatsCardSkeleton />
+            <StatsCardSkeleton />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 animate-fade-in-up animation-delay-200">
           <div className="group bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 transform">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -227,7 +236,9 @@ const DashboardPatient = () => {
             </div>
           </div>
         </div>
+        )}
 
+        {/* Appointments Section */}
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-8 animate-fade-in-up animation-delay-400">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
@@ -243,9 +254,10 @@ const DashboardPatient = () => {
             )}
           </div>
           {appointmentsLoading ? (
-            <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent mx-auto"></div>
-              <p className="text-gray-500 dark:text-gray-400 mt-4 font-medium">Loading appointments...</p>
+            <div className="space-y-4">
+              <AppointmentSkeleton />
+              <AppointmentSkeleton />
+              <AppointmentSkeleton />
             </div>
           ) : appointments.length > 0 ? (
             <div className="space-y-4">
@@ -481,6 +493,15 @@ const DashboardPatient = () => {
 
             {showMap ? (
               <DoctorMap doctors={filteredDoctors} />
+            ) : loading ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <CardSkeleton />
+                <CardSkeleton />
+                <CardSkeleton />
+                <CardSkeleton />
+                <CardSkeleton />
+                <CardSkeleton />
+              </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredDoctors.length > 0 ? (
