@@ -106,8 +106,4 @@ GitHub: [https://github.com/RAHULJADHAV-07](https://github.com/RAHULJADHAV-07)
 
 ```
 
----
 
-✅ **Now this will work perfectly on GitHub** — no preview errors, no markdown overload.  
-Would you like me to add **just one small screenshot section** below this (for project visuals) while keeping it lightweight?
-```
